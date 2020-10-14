@@ -79,7 +79,7 @@ MainForm::MainForm(QWidget* parent) : QWidget(parent), ui(new Ui::MainForm) {
     menubar = new QMenu(this);
     closeAct = new QAction(QString::fromLocal8Bit("¹Ø±Õ"), this);
     closeAct->setIcon(QIcon(":/img/4.png"));
-    showmainForm = new QAction("ÏÔÊ¾", this);
+    showmainForm = new QAction(QString::fromLocal8Bit("ÏÔÊ¾"), this);
     showmainForm->setIcon(QIcon(":/img/6.png"));
     menubar->addAction(showmainForm);
     menubar->addAction(closeAct);
