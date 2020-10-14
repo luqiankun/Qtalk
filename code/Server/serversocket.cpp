@@ -24,7 +24,7 @@ ServerSocket::ServerSocket() {
 void ServerSocket::PrintStr(string str) {
     QDateTime time = QDateTime::currentDateTime();
     string nowtime = time.toString().toLocal8Bit().toStdString();
-    cout << nowtime + ">>" + str << endl;
+    cout << nowtime + ">>" + QString::fromStdString(str).toLocal8Bit().toStdString() << endl;
 }
 
 void ServerSocket::Discon(int t) {
