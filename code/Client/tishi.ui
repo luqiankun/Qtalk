@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Tishi</class>
+ <widget class="QWidget" name="Tishi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>294</width>
+    <height>105</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(97, 97, 97);</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;微软雅黑&quot;;
+color: rgb(255, 76, 32);
+</string>
+   </property>
+   <property name="text">
+    <string>收到来自l的消息</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="okBtn">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#okBtn{
+color: rgb(255, 255, 255);
+	background-color: rgb(74, 74, 74);
+border-radius:5px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>查看</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="noBtn">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>80</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#noBtn{
+color: rgb(255, 255, 255);
+	background-color: rgb(74, 74, 74);
+border-radius:5px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

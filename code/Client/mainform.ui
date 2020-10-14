@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainForm</class>
+ <widget class="QWidget" name="MainForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>279</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(80, 80, 80);</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,2,0,16">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,9,1,1">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">border-image: url(:/img/logo.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="minBtn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#minBtn{
+border-image: url(:/img/3.png);
+border-radius:5px;
+}
+#minBtn:hover{
+	background-color: rgb(163, 100, 71);
+border-image: url(:/img/3.png);
+border-radius:5px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="closeAllBtn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#closeAllBtn{
+border-image: url(:/img/4.png);
+border-radius:5px;
+}
+#closeAllBtn:hover{
+	background-color: rgb(163, 100, 71);
+border-image: url(:/img/4.png);
+border-radius:5px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1,1">
+       <item>
+        <widget class="QLabel" name="headLabel">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>58</height>
+          </size>
+         </property>
+         <property name="mouseTracking">
+          <bool>true</bool>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+border-radius:13px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="nichengLabel">
+         <property name="styleSheet">
+          <string notr="true">font: 11pt &quot;华光胖头鱼_CNKI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-bottom:1px solid ;
+background-color: rgb(52, 173, 229);
+font: 12pt &quot;黑体&quot;;
+padding-left:10px;
+border-radius:5px;</string>
+       </property>
+       <property name="text">
+        <string>在线好友</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="usersList">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+#uersList{
+color:rgb(173,175,178);background:rgb(125,127,131);;border:0px solid gray;
+	
+}
+#usersList::Item{
+ background: transparent;
+height:60px;padding-left:5px;
+	font: 28pt &quot;隶书&quot;;
+}
+#usersList::Item:hover{
+color:rgb(255,55,255);background:transparent;border-left:7px solid rgb(255,0,0);
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

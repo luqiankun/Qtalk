@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="chatform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qnchatmessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tishi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="chatform.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="login.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mainform.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qnchatmessage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="tishi.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Client_zh_CN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="chatform.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="login.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mainform.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="tishi.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\3.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\5.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\6.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\7.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\98.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\99.jpeg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="img.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="img\logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1322.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1323.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1324.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1325.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1326.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1327.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1328.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1329.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1330.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1331.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1332.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1333.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1334.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1335.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1336.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1337.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1338.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1339.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1340.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1341.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1342.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1343.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1344.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1345.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1346.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1347.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1348.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1349.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1350.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1351.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1352.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1353.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1354.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1355.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1356.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1357.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1358.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1359.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1360.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1361.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1362.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1363.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1364.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1365.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1366.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1367.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1368.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1369.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1370.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1371.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1372.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1373.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1374.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1375.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1376.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1377.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1378.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1379.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1380.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picture-1381.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\set.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\you.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\zuo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Communication_format.md">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="user.ini">
+      <Filter>Distribution Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\Client_resource.rc" />
+  </ItemGroup>
+</Project>

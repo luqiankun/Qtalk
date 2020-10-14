@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>521</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Form{
+	background-color: rgb(121, 121, 121);
+
+}</string>
+  </property>
+  <widget class="QPushButton" name="loginBtn">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>200</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#loginBtn{
+border-radius:8px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(40, 168, 234);
+}
+#loginBtn:hover{
+border-radius:8px;
+	color: rgb(255, 0, 255);
+	background-color: rgb(40, 168, 234);
+}</string>
+   </property>
+   <property name="text">
+    <string>登录</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="userBtn">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>184</y>
+     <width>71</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="statusLabel">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>250</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(213, 81, 28);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>50</y>
+     <width>209</width>
+     <height>139</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLineEdit" name="userLineedit">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(188, 188, 188);
+border-radius:10px;</string>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string>输入你的账号</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="pwdLineedit">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(188, 188, 188);border-radius:10px;</string>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>输入密码</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>240</y>
+     <width>54</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(238, 238, 238);
+font: 8pt &quot;.PingFang SC&quot;;</string>
+   </property>
+   <property name="text">
+    <string>记住账号</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>360</y>
+     <width>341</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="IPlineedit">
+      <property name="text">
+       <string>127.0.0.1</string>
+      </property>
+      <property name="placeholderText">
+       <string>服务器IP地址</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="Portlineedit">
+      <property name="text">
+       <string>1234</string>
+      </property>
+      <property name="placeholderText">
+       <string>服务器端口号</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="IPlabel">
+      <property name="text">
+       <string>服务器IP</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="Portlabel">
+      <property name="text">
+       <string>服务器端口</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="setokBtn">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius:6px;
+background-color: rgb(157, 136, 131);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>确定</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>0</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QPushButton" name="logonBtn">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="toolTip">
+       <string>输入想要注册的账号和密码，然后点击此按钮注册</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+
+#logonBtn{
+border-radius:5px;
+border-image: url(:/img/5.png);}
+#logonBtn:hover{
+border-radius:5px;
+border-image: url(:/img/5.png);
+	background-color: rgb(172, 255, 175);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="setBtn">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="toolTip">
+       <string>服务器设置</string>
+      </property>
+      <property name="toolTipDuration">
+       <number>-1</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+#setBtn{
+border-radius:5px;
+border-image: url(:/img/set.png);}
+#setBtn:hover{
+border-radius:5px;
+border-image: url(:/img/set.png);
+	background-color: rgb(172, 255, 175);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_4{
+border-radius:5px;
+border-image: url(:/img/3.png);}
+#pushButton_4:hover{border-radius:5px;
+border-image: url(:/img/3.png);
+	background-color: rgb(172, 255, 175);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="toolTip">
+       <string>关闭</string>
+      </property>
+      <property name="toolTipDuration">
+       <number>-1</number>
+      </property>
+      <property name="whatsThis">
+       <string/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_6{border-radius:5px;
+border-image: url(:/img/4.png);}
+#pushButton_6:hover{border-radius:5px;
+border-image: url(:/img/4.png);
+	background-color: rgb(172, 255, 175);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>userLineedit</tabstop>
+  <tabstop>pwdLineedit</tabstop>
+  <tabstop>loginBtn</tabstop>
+  <tabstop>userBtn</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>pushButton_6</tabstop>
+  <tabstop>setBtn</tabstop>
+  <tabstop>logonBtn</tabstop>
+  <tabstop>IPlineedit</tabstop>
+  <tabstop>Portlineedit</tabstop>
+  <tabstop>setokBtn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

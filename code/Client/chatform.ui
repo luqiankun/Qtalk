@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChatForm</class>
+ <widget class="QWidget" name="ChatForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>522</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,8,4,1">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,2,9,12,2,2,1">
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="styleSheet">
+          <string notr="true">border-radius:7px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#pushButton_2{
+border-radius:5px;
+font: 12pt &quot;隶书&quot;;
+color: rgb(255, 255, 255);
+}
+#pushButton_2:hover{
+border-radius:5px;
+font: 12pt &quot;隶书&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(212, 212, 212);
+}
+
+</string>
+         </property>
+         <property name="text">
+          <string>-</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#pushButton{
+border-radius:5px;
+font: 12pt &quot;隶书&quot;;
+color: rgb(255, 255, 255);
+}
+#pushButton:hover{
+border-radius:5px;
+font: 12pt &quot;隶书&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(212, 212, 212);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>X</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listWidget">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(45, 45, 48);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::NoSelection</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="SendtextEdit">
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(56, 49, 45);
+background-color: #252526;
+color: rgb(255, 255, 255);
+font: 12pt &quot;宋体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="sendBtn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>18</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#sendBtn{
+
+background-color: rgb(89, 89, 89);
+border-radius:5px;
+color: rgb(255, 255, 255);
+font: 12pt &quot;宋体&quot;;
+}
+
+#sendBtn:hover{
+
+background-color: rgb(89, 89, 89);
+border-radius:5px;
+color: rgb(255, 12, 45);
+font: 12pt &quot;宋体&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>发  送</string>
+         </property>
+         <property name="shortcut">
+          <string>Ctrl+Return</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

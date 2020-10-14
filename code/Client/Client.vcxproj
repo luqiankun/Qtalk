@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6192A23D-96DB-380B-AB18-DFA8D720A055}</ProjectGuid>
+    <RootNamespace>Client</RootNamespace>
+    <Keyword>QtVS_v303</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.18362.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>Client</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>Client</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>debug\</OutDir>
+    <IntDir>debug\</IntDir>
+    <TargetName>Client</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>release\</OutDir>
+    <IntDir>release\</IntDir>
+    <TargetName>Client</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2019_64</QtInstall>
+    <QtModules>core;network;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2019_64</QtInstall>
+    <QtModules>core;network;gui;widgets</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;release;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;NDEBUG;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\Client.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;NDEBUG;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>img</InitFuncName>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(ProjectDir)</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;debug;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\Client.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>img</InitFuncName>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(ProjectDir)</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="chatform.cpp" />
+    <ClCompile Include="login.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainform.cpp" />
+    <ClCompile Include="qnchatmessage.cpp" />
+    <ClCompile Include="tishi.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="chatform.h">
+    </QtMoc>
+    <QtMoc Include="login.h">
+    </QtMoc>
+    <QtMoc Include="mainform.h">
+    </QtMoc>
+    <QtMoc Include="qnchatmessage.h">
+    </QtMoc>
+    <QtMoc Include="tishi.h">
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -std:c++latest -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -std:c++latest -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Client_zh_CN.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="chatform.ui">
+    </QtUic>
+    <QtUic Include="login.ui">
+    </QtUic>
+    <QtUic Include="mainform.ui">
+    </QtUic>
+    <QtUic Include="tishi.ui">
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1.png" />
+    <None Include="img\2.png" />
+    <None Include="img\3.gif" />
+    <None Include="img\3.png" />
+    <None Include="img\4.png" />
+    <None Include="img\5.png" />
+    <None Include="img\6.png" />
+    <None Include="img\7.png" />
+    <None Include="img\98.jpg" />
+    <None Include="img\99.jpeg" />
+    <QtRcc Include="img.qrc">
+    </QtRcc>
+    <None Include="img\logo.png" />
+    <None Include="img\picture-1322.jpg" />
+    <None Include="img\picture-1323.jpg" />
+    <None Include="img\picture-1324.jpg" />
+    <None Include="img\picture-1325.jpg" />
+    <None Include="img\picture-1326.jpg" />
+    <None Include="img\picture-1327.jpg" />
+    <None Include="img\picture-1328.jpg" />
+    <None Include="img\picture-1329.jpg" />
+    <None Include="img\picture-1330.jpg" />
+    <None Include="img\picture-1331.jpg" />
+    <None Include="img\picture-1332.jpg" />
+    <None Include="img\picture-1333.jpg" />
+    <None Include="img\picture-1334.jpg" />
+    <None Include="img\picture-1335.jpg" />
+    <None Include="img\picture-1336.jpg" />
+    <None Include="img\picture-1337.jpg" />
+    <None Include="img\picture-1338.jpg" />
+    <None Include="img\picture-1339.jpg" />
+    <None Include="img\picture-1340.jpg" />
+    <None Include="img\picture-1341.jpg" />
+    <None Include="img\picture-1342.jpg" />
+    <None Include="img\picture-1343.jpg" />
+    <None Include="img\picture-1344.jpg" />
+    <None Include="img\picture-1345.jpg" />
+    <None Include="img\picture-1346.jpg" />
+    <None Include="img\picture-1347.jpg" />
+    <None Include="img\picture-1348.jpg" />
+    <None Include="img\picture-1349.jpg" />
+    <None Include="img\picture-1350.jpg" />
+    <None Include="img\picture-1351.jpg" />
+    <None Include="img\picture-1352.jpg" />
+    <None Include="img\picture-1353.jpg" />
+    <None Include="img\picture-1354.jpg" />
+    <None Include="img\picture-1355.jpg" />
+    <None Include="img\picture-1356.jpg" />
+    <None Include="img\picture-1357.jpg" />
+    <None Include="img\picture-1358.jpg" />
+    <None Include="img\picture-1359.jpg" />
+    <None Include="img\picture-1360.jpg" />
+    <None Include="img\picture-1361.jpg" />
+    <None Include="img\picture-1362.jpg" />
+    <None Include="img\picture-1363.jpg" />
+    <None Include="img\picture-1364.jpg" />
+    <None Include="img\picture-1365.jpg" />
+    <None Include="img\picture-1366.jpg" />
+    <None Include="img\picture-1367.jpg" />
+    <None Include="img\picture-1368.jpg" />
+    <None Include="img\picture-1369.jpg" />
+    <None Include="img\picture-1370.jpg" />
+    <None Include="img\picture-1371.jpg" />
+    <None Include="img\picture-1372.jpg" />
+    <None Include="img\picture-1373.jpg" />
+    <None Include="img\picture-1374.jpg" />
+    <None Include="img\picture-1375.jpg" />
+    <None Include="img\picture-1376.jpg" />
+    <None Include="img\picture-1377.jpg" />
+    <None Include="img\picture-1378.jpg" />
+    <None Include="img\picture-1379.jpg" />
+    <None Include="img\picture-1380.jpg" />
+    <None Include="img\picture-1381.jpg" />
+    <None Include="img\set.png" />
+    <None Include="img\you.png" />
+    <None Include="img\zuo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Communication_format.md" />
+    <None Include="user.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\Client_resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
