@@ -1,4 +1,6 @@
-
+#if defined(_MSC_VER) && (_MSC_VER >= 1600)
+#    pragma execution_character_set("utf-8")
+#endif
 #include "serversocket.h"
 
 #include <QDateTime>
@@ -262,6 +264,22 @@ void ServerSocket::SendUsers(int handle) {
 void ServerSocket::Upheadimg(QString id, QString pwd, QString imgdata) {
     if (sql->Upheadimg(id, pwd, imgdata)) {
         PrintStr(id.toStdString() + " 上传头像成功");
+        QJsonDocument doc;
+        QJsonObject obj;
+        QJsonArray jsonarray;
+        obj.insert("header", 7);
+        obj.insert("return", 1);
+        for (auto var:onlineUsers->values())
+        {
+            if (var == id) {
+                auto v = onlineUsers->key(id);
+                for (auto& x : *conList) {
+                    if (x->socketDescriptor() == v) {
+                        x->write(doc.toJson(QJsonDocument::Compact));
+                    }
+                }
+            }
+        }
     } else {
         PrintStr(id.toStdString() + " 上传头像失败");
     }

@@ -1,4 +1,6 @@
-
+#if defined(_MSC_VER) && (_MSC_VER >= 1600)
+#    pragma execution_character_set("utf-8")
+#endif
 #include "sql.h"
 
 #include <QDateTime>
@@ -56,7 +58,7 @@ bool SQL::Open() {
 bool SQL::Close() {
     if (db->isValid() && db->open()) {
         QSqlQuery query;
-        QString str = QString::fromLocal8Bit("delete from online_user");
+        QString str = "delete from online_user";
         query.exec(str);
         db->close();
         this->PrintStr("Êý¾Ý¿â¹Ø±Õ³É¹¦");
@@ -71,7 +73,7 @@ bool SQL::Close() {
 void SQL::PrintStr(string str) {
     QDateTime time = QDateTime::currentDateTime();
     string nowtime = time.toString().toLocal8Bit().toStdString();
-    cout << nowtime + ">>" + str << endl;
+    cout << nowtime + ">>" + QString::fromStdString(str).toLocal8Bit().toStdString() << endl;
 }
 
 bool SQL::Login(QString useName, QString userPwd) {
@@ -82,7 +84,7 @@ bool SQL::Login(QString useName, QString userPwd) {
     }
     else {
         QSqlQuery query;
-        QString str = QString::fromLocal8Bit("select * from user_pwd where êÇ³Æ=? and ÃÜÂë=?;");
+        QString str = "select * from user_pwd where êÇ³Æ=? and ÃÜÂë=?;";
         query.prepare(str);
         query.addBindValue(useName);
         query.addBindValue(userPwd);
@@ -93,15 +95,15 @@ bool SQL::Login(QString useName, QString userPwd) {
             return false;
         }
         else {
-            QString str2 = QString::fromLocal8Bit("SELECT * FROM online_user WHERE êÇ³Æ=") + useName + ";";
+            QString str2 = "SELECT * FROM online_user WHERE êÇ³Æ=" + useName + ";";
             query.exec(str2);
             rec = query.record();
             if (!query.first()) {
                 // TODO
                 str2.clear();
-                str2 = QString::fromLocal8Bit("insert into online_user (êÇ³Æ) values(") + useName + ");";
+                str2 ="insert into online_user (êÇ³Æ) values(" + useName + ");";
                 query.exec(str2);
-                qDebug() << useName + QString::fromLocal8Bit("µÇÂ¼³É¹¦");
+                qDebug() << useName + "µÇÂ¼³É¹¦";
                 return true;
             }
             else {
@@ -120,7 +122,7 @@ bool SQL::Logout(QString useName) {
     }
     else {
         QSqlQuery query;
-        QString str = QString::fromLocal8Bit("select * from user_pwd where êÇ³Æ=\"") + useName + "\"";
+        QString str = "select * from user_pwd where êÇ³Æ=\"" + useName + "\"";
         query.exec(str);
         QSqlRecord rec = query.record();
         if (!query.first()) {
@@ -128,12 +130,12 @@ bool SQL::Logout(QString useName) {
             return false;
         }
         else {
-            QString str2 = QString::fromLocal8Bit("SELECT * FROM online_user WHERE êÇ³Æ=\"") + useName + "\"";
+            QString str2 = "SELECT * FROM online_user WHERE êÇ³Æ=\"" + useName + "\"";
             query.exec(str2);
             if (query.first()) {
                 // TODO
                 str2.clear();
-                str2 = QString::fromLocal8Bit("delete from online_user where êÇ³Æ=\"") + useName + "\"";
+                str2 = "delete from online_user where êÇ³Æ=\"" + useName + "\"";
                 query.exec(str2);
                 PrintStr(useName.toStdString() + "ÏÂÏß³É¹¦");
                 return true;
@@ -154,7 +156,7 @@ bool SQL::IsOnline(QString useName) {
     }
     else {
         QSqlQuery query;
-        QString str = QString::fromLocal8Bit("select * from online_user where êÇ³Æ=") + useName + ";";
+        QString str ="select * from online_user where êÇ³Æ=" + useName + ";";
         query.exec(str);
         if (!query.first()) {
             PrintStr(useName.toLocal8Bit().toStdString() + "²»ÔÚÏß");
@@ -178,7 +180,7 @@ bool SQL::Logon(QString useName, QString userPwd) {
             return false;
         }
         QSqlQuery query;
-        QString str = QString::fromLocal8Bit("select * from user_pwd where êÇ³Æ=?;");
+        QString str ="select * from user_pwd where êÇ³Æ=?;";
         query.prepare(str);
         query.addBindValue(useName);
         query.exec();
@@ -195,7 +197,7 @@ bool SQL::Logon(QString useName, QString userPwd) {
             query.addBindValue(userPwd);
             query.addBindValue("");
             query.exec();
-            QString str = QString::fromLocal8Bit("select * from user_pwd where êÇ³Æ=? and ÃÜÂë=?;");
+            QString str = "select * from user_pwd where êÇ³Æ=? and ÃÜÂë=?;";
             query.clear();
             query.prepare(str);
             query.addBindValue(useName);
@@ -221,7 +223,7 @@ bool SQL::Upheadimg(QString useName, QString userPwd, QString imgdata) {
     }
     else {
         QSqlQuery query;
-        QString str = QString::fromLocal8Bit("update user_pwd set Í·Ïñ=\"") + imgdata + QString::fromLocal8Bit("\" where êÇ³Æ=? and ÃÜÂë=?;");
+        QString str = "update user_pwd set Í·Ïñ=\"" + imgdata + "\" where êÇ³Æ=? and ÃÜÂë=?;";
 
         query.prepare(str);
         query.addBindValue(useName);
@@ -240,13 +242,13 @@ QString SQL::HeadOf(QString useName, QString) {
         return "";
     }
     else {
-        QString str = QString::fromLocal8Bit("select Í·Ïñ from user_pwd where êÇ³Æ=?;");
+        QString str = "select Í·Ïñ from user_pwd where êÇ³Æ=?;";
         QSqlQuery query;
         query.prepare(str);
         query.addBindValue(useName);
         if (query.exec()) {
             if (query.first()) {
-                return query.value(QString::fromLocal8Bit("Í·Ïñ")).toString();
+                return query.value("Í·Ïñ").toString();
             }
             else {
                 return "";
@@ -273,7 +275,7 @@ QList<QString> SQL::OnlineList() {
         QSqlRecord rec;
         while (query.next()) {
             rec = query.record();
-            int snamecol = rec.indexOf(QString::fromLocal8Bit("êÇ³Æ"));
+            int snamecol = rec.indexOf("êÇ³Æ");
             QString value = rec.value(snamecol).toString();
             // qDebug() << value;
             onlines.push_back(value);

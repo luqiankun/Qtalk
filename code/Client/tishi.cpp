@@ -1,4 +1,6 @@
-
+#if defined(_MSC_VER) && (_MSC_VER >= 1600)
+#    pragma execution_character_set("utf-8")
+#endif
 #include "tishi.h"
 
 #include <QBitmap>
@@ -21,7 +23,7 @@ Tishi::Tishi(QString str) : ui(new Ui::Tishi) {
     QDesktopWidget* desktopWidget = QApplication::desktop();
     nWidth = desktopWidget->width();
     nHeight = desktopWidget->height();
-    ui->label->setText(QString::fromLocal8Bit("收到来自：") + str + QString::fromLocal8Bit( "的消息！"));
+    ui->label->setText("收到来自：" + str + "的消息！");
     timer = new QTimer();
     timer->setSingleShot(true);
     timer->setInterval(6000);

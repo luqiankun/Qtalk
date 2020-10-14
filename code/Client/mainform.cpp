@@ -11,6 +11,7 @@
 #include <QDragEnterEvent>
 #include <QFile>
 #include <QFileDialog>
+#include <QFileInfo>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -77,9 +78,9 @@ MainForm::MainForm(QWidget* parent) : QWidget(parent), ui(new Ui::MainForm) {
         }
     });
     menubar = new QMenu(this);
-    closeAct = new QAction(QString::fromLocal8Bit("关闭"), this);
+    closeAct = new QAction("关闭", this);
     closeAct->setIcon(QIcon(":/img/4.png"));
-    showmainForm = new QAction(QString::fromLocal8Bit("显示"), this);
+    showmainForm = new QAction("显示", this);
     showmainForm->setIcon(QIcon(":/img/6.png"));
     menubar->addAction(showmainForm);
     menubar->addAction(closeAct);
@@ -258,6 +259,12 @@ void MainForm::ProcessNews() {
                         }
                     }
                 }
+                if (value.toInt() == 7) {
+                    if (obj.value("return").toInt() == 1) {
+                    
+                    }
+
+                }
             }
         }
     }
@@ -305,11 +312,29 @@ void MainForm::mouseDoubleClickEvent(QMouseEvent* event) {
         QString path = QFileDialog::getOpenFileName(this, "请选择图片", "/", "图片文件 (*.png *.jpg *.jpeg *.bmp);;");
         if (!path.isEmpty()) {
             QFile file(path);
+            QFileInfo info(path);
+            QString suffix = info.suffix();
+
             file.open(QIODevice::ReadOnly);
             QByteArray data;
             data = file.readAll();
             QPixmap img;
-            img.loadFromData(data, "png");
+            if (suffix=="png")
+            {
+                img.loadFromData(data, "png");
+            }
+            if (suffix == "jpg")
+            {
+                img.loadFromData(data, "jpg");
+            }
+            if (suffix == "jpeg")
+            {
+                img.loadFromData(data, "jpeg");
+            }
+            if (suffix == "bmp")
+            {
+                img.loadFromData(data, "bmp");
+            }
             img = img.scaled(ui->headLabel->size());
             ui->headLabel->setPixmap(img);
             file.close();
@@ -329,7 +354,7 @@ void MainForm::mouseDoubleClickEvent(QMouseEvent* event) {
     }
 }
 QPixmap MainForm::pixmapFrom(const QJsonValue& val) {
-    auto const encoded = val.toString().toUtf8();
+    auto const encoded = val.toString().toLocal8Bit();
     QPixmap p;
     p.loadFromData(QByteArray::fromBase64(encoded), "PNG");
     return p;
@@ -339,7 +364,7 @@ QJsonValue MainForm::jsonValFromPixmap(const QPixmap& p) {
     buffer.open(QIODevice::WriteOnly);
     p.save(&buffer, "PNG");
     auto const encoded = buffer.data().toBase64();
-    return {QString::fromUtf8(encoded)};
+    return {QString::fromLocal8Bit(encoded)};
 }
 void MainForm::on_usersList_itemDoubleClicked(QListWidgetItem* item) {
     std::cout << "item ulji";

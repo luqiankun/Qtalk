@@ -1,4 +1,6 @@
-
+#if defined(_MSC_VER) && (_MSC_VER >= 1600)
+#    pragma execution_character_set("utf-8")
+#endif
 #include "chatform.h"
 
 #include <QBitmap>
@@ -68,7 +70,7 @@ void ChatForm::MessgaeOfShe(QString msg) {
 
 void ChatForm::Sendstatue(bool p) {
     if (!p) {
-        MessageOfMe(QString::fromLocal8Bit("系统提示：发送失败"));
+        MessageOfMe("系统提示：发送失败");
     }
 }
 
@@ -78,7 +80,7 @@ ChatForm::ChatForm(QString s) : ui(new Ui::ChatForm) {
     ui->setupUi(this);
     this->setWindowFlag(Qt::FramelessWindowHint);
     this->Widget_ID = s;
-    ui->label->setText(QString::fromLocal8Bit("正在和") + this->Widget_ID + QString::fromLocal8Bit("对话..."));
+    ui->label->setText("正在和" + this->Widget_ID + "对话...");
     mouve = new QMovie(this);
     mouve->setFileName(":/img/3.gif");
 

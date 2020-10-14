@@ -1,4 +1,6 @@
-
+#if defined(_MSC_VER) && (_MSC_VER >= 1600)
+#    pragma execution_character_set("utf-8")
+#endif
 #include "clientsocket.h"
 
 #include <QDebug>
@@ -42,7 +44,7 @@ void ClientSocket::DataRece() {
             }
             if (value.toInt() == 3) {  //发送消息
                 emit Sendnews(des, obj.value("sendto").toString(), obj.value("msg").toString());
-                qDebug() << des << QString::fromLocal8Bit("发送给") << obj.value("sendto").toString() << QString::fromLocal8Bit("消息：") << obj.value("msg").toString()
+                qDebug() << des << "发送给" << obj.value("sendto").toString() <<"消息：" << obj.value("msg").toString()
                     << Qt::endl;
             }
             if (value.toInt() == 4) {  //请求在线列表
