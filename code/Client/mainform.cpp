@@ -27,7 +27,7 @@
 #include <QUrl>
 #include <QtEvents>
 #include <iostream>
-
+#include <QSystemtrayIcon>
 #include "ui_mainform.h"
 MainForm::MainForm(QWidget* parent) : QWidget(parent), ui(new Ui::MainForm) {
     ui->setupUi(this);
@@ -86,6 +86,7 @@ MainForm::MainForm(QWidget* parent) : QWidget(parent), ui(new Ui::MainForm) {
     menubar->addAction(closeAct);
 
     tuoPan->setContextMenu(menubar);
+    tuoPan->setToolTip(this->userName);
     connect(closeAct, &QAction::triggered, this, [&] { tuoPan->hide(), qApp->exit(0); });
     connect(showmainForm, &QAction::triggered, this, [this] { this->show(); });
     //    ui->headLabel->installEventFilter(ui->headLabel);
@@ -142,6 +143,7 @@ void MainForm::Serverset(QString ip, int port) {
         emit this->IsConSer(true);
         connect(client, &QTcpSocket::readyRead, this, &MainForm::ProcessNews);
         connect(client, &QTcpSocket::disconnected, this, [&] {
+            tuoPan->hide();
             //            emit this->IsConSer(false);
             QMessageBox::StandardButton res =
                 QMessageBox::information(NULL, "正在关闭软件....", "已和服务器断开,点击ok关闭软件");
@@ -186,7 +188,7 @@ void MainForm::ProcessNews() {
             if (value.toInt() == 3) {  //发送消息
                 if (obj.value("return").toInt() == 0) {
                     for (auto& x : ChatWidgets) {
-                        if (x->Widget_ID == obj.value("from").toString()) {
+                        if (x->Widget_ID == obj.value("sendto").toString()) {
                             x->Sendstatue(false);
                         }
                     }
@@ -198,6 +200,7 @@ void MainForm::ProcessNews() {
                 }
             }
             if (value.toInt() == 5) {  //刷新在线列表
+                ui->usersList->clear();
                 if (obj.value("return").toInt() == 1) {
                     QJsonArray jsonarray;
                     jsonarray = obj.value("msg").toArray();

@@ -221,7 +221,7 @@ void ServerSocket::Sendnews(int handle, QString user, QString news) {
         obj.insert("msg", news);
         doc.setObject(obj);
         for (auto& x : *conList) {
-            if (x->socketDescriptor() == handle) {
+            if (x->socketDescriptor() ==handle) {
                 x->write(doc.toJson(QJsonDocument::Compact));
             }
         }

@@ -50,9 +50,8 @@ class MainForm : public QWidget {
     void on_minBtn_clicked();
 
   private:
-    int m;
-    Tishi* tishi;
-    QTimer* timer;
+    Tishi* tishi=nullptr;
+    QTimer* timer=nullptr;
     QMenu* menubar;
     QAction* closeAct;
     QAction* showmainForm;
